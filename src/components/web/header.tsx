@@ -1,8 +1,4 @@
-import {
-  ArrowUpRight,
-  PartyPopper,
-  SnowflakeIcon
-} from "lucide-react"
+import { ArrowUpRight, PartyPopper, SnowflakeIcon } from "lucide-react"
 import { Link as ViewTransitionsLink } from "next-view-transitions"
 import Link from "next/link"
 import { ToggleTheme } from "./theme-toggle"
@@ -22,17 +18,16 @@ const Header = () => {
               Explore new components
             </span>
           </span>
-
         </Link>
-          <div className="group relative inline-flex items-center gap-2 px-3 py-1 text-sm rounded-lg bg-zinc-900 dark:bg-zinc-100 transition-colors">
-            <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 opacity-40 group-hover:opacity-80 blur-sm transition-opacity duration-500" />
-            <div className="relative z-10 flex items-center gap-2">
-              <span className="text-white dark:text-zinc-900 flex items-center">
-                FeatherUi Pro
+        <div className="group relative inline-flex items-center gap-2 px-3 py-1 text-sm rounded-lg bg-zinc-900 dark:bg-zinc-100 transition-colors">
+          <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 opacity-40 group-hover:opacity-80 blur-sm transition-opacity duration-500" />
+          <div className="relative z-10 flex items-center gap-2">
+            <span className="text-white dark:text-zinc-900 flex items-center">
+              FeatherUi Pro
               <ArrowUpRight className="w-3.5 h-3.5 text-white/90 dark:text-zinc-900/90" />
-              </span>
-            </div>
+            </span>
           </div>
+        </div>
       </div>
 
       <div className="sticky top-0 left-0 right-0 z-50">
@@ -45,7 +40,7 @@ const Header = () => {
                             shadow-[0_2px_20px_-2px_rgba(0,0,0,0.1)]
                             backdrop-blur-md
                             border-b 
-                            w-full sm:min-w-[800px] sm:max-w-[1200px]
+                            w-full sm:min-w-[800px] sm:max-w-[1400px]
                             px-4 py-2.5
                             relative
                             transition-all duration-300 ease-in-out
@@ -99,6 +94,18 @@ const Header = () => {
                   <span className="text-zinc-300 dark:text-zinc-700">|</span>
                   {/* <HeaderPro /> */}
                   <ToggleTheme />
+                  <span className="text-zinc-300 dark:text-zinc-700">|</span>
+                  <ViewTransitionsLink
+                    href="#"
+                    target="_blank"
+                    className="text-sm text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors flex items-center gap-2"
+                  >
+                    Buy{"  "}
+                    <span className="px-2 flex items-center text-black font-medium bg-green-500 dark:bg-lime-400 rounded-md text-sm">
+                      {" "}
+                      UIPro
+                    </span>
+                  </ViewTransitionsLink>
                 </div>
 
                 {/* Mobile Navigation remains unchanged */}

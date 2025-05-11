@@ -1,16 +1,11 @@
-import type { Metadata } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
-import "./globals.css"
-import { ViewTransitions } from "next-view-transitions"
 import { ThemeProvider } from "@/providers/theme-provider"
+import type { Metadata } from "next"
+import { ViewTransitions } from "next-view-transitions"
+import { Inter } from "next/font/google"
+import "./globals.css"
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-})
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
+  variable: "--inter",
   subsets: ["latin"],
 })
 
@@ -27,9 +22,7 @@ export default function RootLayout({
   return (
     <ViewTransitions>
       <html lang="en" suppressHydrationWarning>
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        >
+        <body className={`${inter?.variable} antialiased`}>
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
