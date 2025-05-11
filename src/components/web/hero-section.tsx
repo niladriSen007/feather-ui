@@ -3,6 +3,9 @@ import { motion } from "motion/react"
 import Figma from "../icons/figma"
 import TailwindCSS from "../icons/tailwindcss"
 import ShowBadge from "./show-badge"
+import BrowseButton from "./browse-button"
+import BrowseBlocks from "./browse-blocks"
+import SmallBadge from "./small-badge"
 
 const HeroSection = () => {
   return (
@@ -14,7 +17,8 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="text-5xl sm:text-6xl lg:text-4xl font-bold   text-zinc-900 dark:text-zinc-100">
+          <SmallBadge />
+          <h1 className="text-4xl sm:text-6xl lg:text-4xl font-bold  leading-12 text-zinc-900 dark:text-zinc-100">
             Discover FeatherUI Design Systems Now!
           </h1>
           <div className="flex items-center gap-6 my-6">
@@ -36,9 +40,9 @@ const HeroSection = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="flex flex-col justify-start w-full"
         >
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-start gap-3">
-            {/* <BrowseComponentsButton />
-          <BrowseBlocksButton /> */}
+          <div className="flex flex-col sm:flex-row items-center sm:items-center justify-start gap-3">
+            <BrowseButton />
+            <BrowseBlocks />
           </div>
         </motion.div>
 
