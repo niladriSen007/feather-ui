@@ -1,5 +1,7 @@
 "use client"
 import { motion } from "motion/react"
+
+import GlassEventCard from "../featherui/card/GlassEventCard"
 import Figma from "../icons/figma"
 import TailwindCSS from "../icons/tailwindcss"
 import BrowseBlocks from "./browse-blocks"
@@ -10,7 +12,7 @@ import SmallBadge from "./small-badge"
 
 const HeroSection = () => {
   return (
-    <div className="mx-auto w-full max-w-7xl min-h-screen flex flex-col lg:flex-row  justify-between gap-8 lg:gap-12 px-4 sm:px-6 py-12 md:py-16 lg:py-40">
+    <div className="mx-auto sm:min-w-[800px] sm:max-w-[1400px] min-h-screen flex flex-col lg:flex-row  justify-between gap-8 lg:gap-12 px-4 sm:px-6 py-12 md:py-16 lg:py-40">
       {/* Left side - Title and CTA */}
       <div className="w-full lg:w-[45%] flex flex-col items-start text-left space-y-8">
         <motion.div
@@ -58,7 +60,9 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.5 }}
           className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 items-center justify-center"
-        ></motion.div>
+        >
+          <GlassEventCard />
+        </motion.div>
 
         {/* Middle row: AI Chat */}
         <motion.div
