@@ -2,9 +2,10 @@
 import { motion } from "motion/react"
 import Figma from "../icons/figma"
 import TailwindCSS from "../icons/tailwindcss"
-import ShowBadge from "./show-badge"
-import BrowseButton from "./browse-button"
 import BrowseBlocks from "./browse-blocks"
+import BrowseButton from "./browse-button"
+import Features from "./features-section"
+import ShowBadge from "./show-badge"
 import SmallBadge from "./small-badge"
 
 const HeroSection = () => {
@@ -46,7 +47,7 @@ const HeroSection = () => {
           </div>
         </motion.div>
 
-        {/*  <Features /> */}
+        <Features />
       </div>
 
       {/* Right side - Components Layout */}
