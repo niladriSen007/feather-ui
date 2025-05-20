@@ -2,6 +2,7 @@ import { ThemeProvider } from "@/providers/theme-provider"
 import type { Metadata } from "next"
 import { ViewTransitions } from "next-view-transitions"
 import { Inter } from "next/font/google"
+import { RootProvider } from "fumadocs-ui/provider"
 import "./globals.css"
 
 const inter = Inter({
@@ -29,7 +30,7 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            {children}
+            <RootProvider>{children}</RootProvider>
           </ThemeProvider>
         </body>
       </html>
